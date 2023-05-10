@@ -180,43 +180,37 @@ Plotly.d3.csv("https://raw.githubusercontent.com/Aper-ux/MentalHealthBI/main/Stu
             {
                 y: data.map(function(d) { return d.panic_attack; }),
                 x: data.map(function(d) { return d.gender; }),
-
                 type: 'bar',
                 name: 'Ataques de pánico',
-
             },
             {
                 y: data.map(function(d) { return d.anxiety; }),
                 x: data.map(function(d) { return d.gender; }),
-
                 type: 'bar',
                 name: 'Ansiedad',
-
             },
             {
                 y: data.map(function(d) { return d.depression; }),
                 x: data.map(function(d) { return d.gender; }),
-
                 type: 'bar',
                 name: 'Depresión',
-
             }
         ];
 
         // Configura el diseño del gráfico
         var configuracion = {
             barmode: 'group',
-            title: 'Gráfico de dispersión de puntuaciones de ansiedad, depresión y ataques de pánico',
+            title: 'Distribución de los problemas de salud mental por género',
             xaxis: {
-                title: 'Puntuación de ataques de pánico'
+                title: 'Genero'
             },
             yaxis: {
-                title: 'Puntuación de ansiedad'
+                title: 'Cantidad'
             }
         };
 
         // Dibuja el gráfico
-        Plotly.newPlot('grafico6', datos, configuracion);
+        Plotly.newPlot('grafico5', datos, configuracion);
 
     });
     
