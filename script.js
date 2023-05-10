@@ -212,3 +212,41 @@ Plotly.d3.csv("https://raw.githubusercontent.com/Aper-ux/MentalHealthBI/main/Stu
 
     });
     
+    Plotly.d3.csv("https://raw.githubusercontent.com/Aper-ux/MentalHealthBI/main/Student%20Mental%20health.csv", function(err, data) {
+        // Agrupar estudiantes por año de estudio y contar la cantidad de estudiantes con depresión en cada año
+        var agrupacion = {};
+        data.forEach(function(d) {
+            var añoEstudio = d.year_study;
+            if (!agrupacion[añoEstudio]) {
+            agrupacion[añoEstudio] = 0;
+            }
+            if (d.depression === 'Yes') {
+            agrupacion[añoEstudio]++;
+            }
+        });
+
+        // Preparar los datos para el gráfico de línea
+        var datos = [{
+            x: Object.keys(agrupacion),
+            y: Object.values(agrupacion),
+            type: 'scatter',
+            mode: 'lines'
+        }];
+
+        // Configurar el diseño del gráfico
+        var configuracion = {
+            title: 'Estudiantes con depresión por año de estudio',
+            xaxis: {
+            title: 'Año de estudio'
+            },
+            yaxis: {
+            title: 'Cantidad de estudiantes con depresión'
+            }
+        };
+      
+        // Dibujar el gráfico de barras
+        Plotly.newPlot('grafico6', datos, configuracion);
+      });
+      
+  
+  
