@@ -1,39 +1,4 @@
-TESTER = document.getElementById('tester');
-	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
-	margin: { t: 0 } } );
-
-TESTER = document.getElementById('tester1');
-	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
-	margin: { t: 0 } } );
-
-TESTER = document.getElementById('tester2');
-	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
-	margin: { t: 0 } } );
-
-TESTER = document.getElementById('tester3');
-	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
-	margin: { t: 0 } } );
-
-TESTER = document.getElementById('tester4');
-	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
-	margin: { t: 0 } } );
-
-TESTER = document.getElementById('tester5');
-	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
-	margin: { t: 0 } } );Plotly.d3.csv("https://raw.githubusercontent.com/Aper-ux/MentalHealthBI/main/Student%20Mental%20health.csv", function(err, data) {
-      
+Plotly.d3.csv("https://raw.githubusercontent.com/Aper-ux/MentalHealthBI/main/Student%20Mental%20health.csv", function(err, data) {      
       // Prepara los datos para el gráfico
       var datos = [
         {
@@ -61,8 +26,7 @@ TESTER = document.getElementById('tester5');
       
       // Dibuja el gráfico
       Plotly.newPlot('grafico1', datos, configuracion);
-      
-    });
+});
 
     // Carga los datos del archivo CSV
     Plotly.d3.csv("https://raw.githubusercontent.com/Aper-ux/MentalHealthBI/main/Student%20Mental%20health.csv", function(err, data) {
@@ -170,7 +134,4 @@ TESTER = document.getElementById('tester5');
       // Dibuja el gráfico
       Plotly.newPlot('grafico4', datos, configuracion);
       
-    });
-
-
-    
+    });     
