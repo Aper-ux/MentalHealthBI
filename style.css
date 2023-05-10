@@ -32,6 +32,22 @@ a:hover{
     color: #000;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+}
+
 .footer{
     display: flex;
     flex-direction: row;
