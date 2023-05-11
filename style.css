@@ -73,3 +73,22 @@ a:hover{
     margin-top: 2%;
     width: 100%;
 }
+
+/* ===== Scrollbar CSS ===== */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #93899c;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #9933ff;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #9933ff;
+    border-radius: 10px;
+  }
